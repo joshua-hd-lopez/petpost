@@ -1,0 +1,32 @@
+# 1) Virtual-env
+env/
+venv/
+
+# 2) Python caches & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3) Local Django DB
+db.sqlite3
+
+# 4) Environment files (if you ever add one)
+.env
+*.env
+
+# 5) Django static/media (if you collect or upload locally)
+static_root/
+media/
+
+# 6) Editor/OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 7) Logs, test/coverage, pip artifacts
+*.log
+htmlcov/
+.coverage
+.pytest_cache/
+pip-wheel-metadata/
