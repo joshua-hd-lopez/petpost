@@ -11,9 +11,25 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os 
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
+load_dotenv(dotenv_path=BASE_DIR / ".env")
+
+# S3_BUCKET = os.environ.get("S3_BUCKET")
+S3_BUCKET = os.getenv("S3_BUCKET")
+# AWS_REGION = os.environ.get("AWS_REGION")
+AWS_REGION = os.getenv("AWS_REGION")
+
+PET_DATA = BASE_DIR / "pets.json"
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +39,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qt31-lp+@g%@=d+%xvft-!^l_!n9q+&vc^65f7h2!+ih3@#3h*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'localhost',]
 
 
 # Application definition
@@ -77,6 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'pets.json',
+
     }
 }
 
@@ -121,3 +140,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

@@ -8,14 +8,14 @@ s3 = boto3.client('s3', region_name=settings.AWS_REGION)
 
 
 def load():
-    if not settings.FILE.exists():
+    if not settings.PET_DATA.exists():
         return []
-    with open(settings.FILE, 'r') as f:
+    with open(settings.PET_DATA, 'r') as f:
         return json.load(f)    
 
 
 def save(pets):
-    with open(settings.FILE, 'w') as f:
+    with open(settings.PET_DATA, 'w') as f:
         json.dump(pets, f, indent=2)
 
 def upload(file, filename):
@@ -24,7 +24,7 @@ def upload(file, filename):
         Fileobj = file, 
         Bucket = settings.S3_BUCKET,
         Key = key,
-        ExtraArgs = {"ACL": "public-read", "ContentType": file_obj.content_type}
+        ExtraArgs = {"ACL": "public-read", "ContentType": file.content_type}
 
     )
 
