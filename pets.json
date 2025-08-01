@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "name": "ytyt",
+    "age": 5,
+    "breed": "yuuy",
+    "image": "https://petpost-4cl3.s3.amazonaws.com/eaf961eb-dc91-4e94-bbd5-aec023692c1b_pexels-chevanon-1108099.jpg"
+  },
+  {
+    "name": "ytyt",
+    "age": 5,
+    "breed": "yuuy",
+    "image": "https://petpost-4cl3.s3.amazonaws.com/eb13a48f-e18a-42e5-bef7-8c53ab2ea92b_pexels-chevanon-1108099.jpg"
+  },
+  {
+    "name": "oscar",
+    "age": 2,
+    "breed": "dogo",
+    "image": "https://petpost-4cl3.s3.amazonaws.com/593e1e7a-f8e3-49c5-adf4-53701556a45d_pexels-chevanon-1108099.jpg"
+  }
+]

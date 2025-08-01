@@ -24,7 +24,7 @@ def upload(file, filename):
         Fileobj = file, 
         Bucket = settings.S3_BUCKET,
         Key = key,
-        ExtraArgs = {"ACL": "public-read", "ContentType": file.content_type}
+        # ExtraArgs = {"ACL": "public-read", "ContentType": file.content_type}
 
     )
 

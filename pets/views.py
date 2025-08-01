@@ -27,7 +27,7 @@ class ListView(TemplateView):
 class AddView(FormView):
     template_name = 'index.html'
     form_class = Forms
-    success_url= reverse_lazy('pets:list')
+    success_url= reverse_lazy('list')
 
     def form_valid(self, form):
         # photo = self.request.FILES['photo']
